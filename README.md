@@ -7,6 +7,6 @@ note app sqlitedatabase mvp 笔记 一款以sqlitedatabase为数据库，采用M
 <img src="https://github.com/sanlisanlisanli/gnote/blob/master/screenshots/Screenshot_20180928-032830.jpg" width="200" height="360">  
 笔记可批量删除  
 <img src="https://github.com/sanlisanlisanli/gnote/blob/master/screenshots/Screenshot_20180928-033017.jpg" width="200" height="360">  
-笔记文件夹管理，可以根据偏好给文件夹重新排序  
+笔记文件夹管理，可以根据偏好给文件夹重新排序，长按item可拖动item  
 <img src="https://github.com/sanlisanlisanli/gnote/blob/master/screenshots/Screenshot_20180928-033059.jpg" width="200" height="360">  
 
