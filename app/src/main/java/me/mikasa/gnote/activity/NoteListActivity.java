@@ -23,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -53,6 +54,7 @@ public class NoteListActivity extends BaseActivity implements GetNoteContract.Vi
     private RecyclerView mRecyclerview;
     private FloatingActionButton note_add;
     private TextView mTitle;
+    private ImageView iv_update,iv_search;
     private DrawerLayout drawerLayout;
     private RecyclerView rv_drawer;
     private NoteAdapter mAdapter;
@@ -95,6 +97,8 @@ public class NoteListActivity extends BaseActivity implements GetNoteContract.Vi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("");
+        iv_update=(ImageView)findViewById(R.id.note_update);
+        iv_search=(ImageView)findViewById(R.id.note_search);
         mRecyclerview=(RecyclerView)findViewById(R.id.rv_note);
         note_add=(FloatingActionButton)findViewById(R.id.note_add);
         mTitle=(TextView)findViewById(R.id.tv_title);
@@ -156,11 +160,23 @@ public class NoteListActivity extends BaseActivity implements GetNoteContract.Vi
 
     @Override
     protected void initListener() {
+        iv_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showToast("更新到云 待开发");
+            }
+        });
+        iv_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showToast("搜索 待开发");
+            }
+        });
         mAdapter.setOnRecyclerViewItemClickListener(this);
         note_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SpUtil.getInstance().setString("category",currentCate);
+                SpUtil.getInstance().setString("categoryCate",currentCate);
                 Intent intent=new Intent(mContext,NoteAddActivity.class);
                 intent.putExtra("currentCate",currentCate);
                 startActivity(intent);
@@ -292,12 +308,6 @@ public class NoteListActivity extends BaseActivity implements GetNoteContract.Vi
         switch (item.getItemId()){
             case android.R.id.home:
                 toggle.onOptionsItemSelected(item);
-                return true;
-            case R.id.refresh:
-                showToast("更新到云 待开发");
-                return true;
-            case R.id.search:
-                showToast("搜索 待开发");
                 return true;
             case R.id.list_delete:
                 Snackbar snackbar=Snackbar.make(note_add,"单击笔记可删除笔记",Snackbar.LENGTH_LONG);

@@ -25,6 +25,7 @@ import me.mikasa.gnote.base.BaseActivity;
 import me.mikasa.gnote.bean.Category;
 import me.mikasa.gnote.bean.Note;
 import me.mikasa.gnote.db.NoteManager;
+import me.mikasa.gnote.utils.SpUtil;
 
 public class CategoryEditActivity extends BaseActivity {
     private EditText et_cate_edit;
@@ -45,6 +46,7 @@ public class CategoryEditActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        SpUtil.init(mContext);
         Intent intent=getIntent();
         cate=intent.getStringExtra("category");
         cateId=intent.getStringExtra("cateId");
@@ -107,6 +109,7 @@ public class CategoryEditActivity extends BaseActivity {
             }
         }
         noteManager.deleteCategory(cateId);//删除文件夹
+        SpUtil.getInstance().setString("currentCate","所有");//返回所有
         goToCateManager();
     }
 
