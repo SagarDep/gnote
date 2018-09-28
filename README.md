@@ -20,4 +20,9 @@ note app sqlitedatabase mvp 笔记 一款以sqlitedatabase为数据库，采用M
 笔记文件夹管理，可以根据偏好给文件夹重新排序，长按item可拖动item  
   
 <img src="https://github.com/sanlisanlisanli/gnote/blob/master/screenshots/Screenshot_20180928-033059.jpg" width="200" height="360">  
+   
+   
+本项目高仿Gnote的UI界面，仅供个人学习使用，禁止用于商业用途  
 
+
+撸码不易，欢迎Star，比心心
