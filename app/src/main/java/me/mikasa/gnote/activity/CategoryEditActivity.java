@@ -50,7 +50,7 @@ public class CategoryEditActivity extends BaseActivity {
         Intent intent=getIntent();
         cate=intent.getStringExtra("category");
         cateId=intent.getStringExtra("cateId");
-        catePos=intent.getStringExtra("pos");
+        //catePos=intent.getStringExtra("pos");
         noteManager=new NoteManager(mContext);
     }
 
@@ -122,9 +122,9 @@ public class CategoryEditActivity extends BaseActivity {
         String s=et_cate_edit.getText().toString();
         if (!TextUtils.isEmpty(s)){
             Category category=new Category();
-            category.setId(cateId);
+            //category.setId(cateId);
             category.setCategory(s);
-            category.setPos(catePos);
+            //category.setPos(catePos);
             noteManager.updateCategory(category);//更新文件夹
             goToCateManager();
         }else {
