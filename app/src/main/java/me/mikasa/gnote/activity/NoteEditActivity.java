@@ -59,11 +59,11 @@ public class NoteEditActivity extends BaseActivity {
         }else {
             String s=et_noteEdit.getText().toString();
             Note note=new Note();
-            note.setId(id);
+            //note.setId(id);
             note.setContent(s);
             Date date=new Date();
             note.setLastTime(Long.toString(date.getTime()));
-            note.setCategory(category);
+            //note.setCategory(category);
             noteManager.update(note);
             goToNoteList();
         }
