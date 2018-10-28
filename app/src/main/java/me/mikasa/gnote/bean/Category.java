@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 
 public class Category implements Serializable,Comparable<Category> {
-    private String id;
+    private String id;//这里数据类型应该改为int
     private String category;
     private String pos;//依据pos对category重新排序
     public String getId() {
