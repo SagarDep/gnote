@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 
 public class Note implements Serializable {
-    private String id;
+    private String id;//这里数据类型应该改为int
     private String content;
     private String firstTime;//note生成时间
     private String lastTime;//note最后编辑时间
