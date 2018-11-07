@@ -22,7 +22,7 @@ note app sqlitedatabase mvp 笔记 一款以sqlitedatabase为数据库，采用M
 <img src="https://github.com/sanlisanlisanli/gnote/blob/master/screenshots/%E6%89%8B%E6%8C%87%E5%9B%BE.jpg" width="200" height="360">  
    
    
-本项目高仿Gnote的UI界面，仅供个人学习使用，禁止用于商业用途  
+本项目高仿Gnote的UI界面，仅供个人学习使用，切勿用于商业用途  
 
 
 撸码不易，欢迎Star，比心
